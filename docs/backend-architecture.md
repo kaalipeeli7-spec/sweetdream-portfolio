@@ -1,25 +1,12 @@
 # Backend Architecture
 
-## Stack
+Backend built using:
 - Node.js
 - Express.js
-- SQLite3 DB
+- SQLite (better-sqlite3)
 - Render.com hosting
 
-## Responsibilities
-- Command Queue System
-- Event Logging
-- File Upload
-- Device Registration
-- Health Status
-
-## Commands API
-POST /commands
-GET /commands/pending
-POST /commands/:id/ack
-
-## Events API
-POST /events
-
-## Upload API
-POST /upload
+Key modules:
+- /events (event ingestion)
+- /commands (remote command delivery)
+- /upload (file uploads)

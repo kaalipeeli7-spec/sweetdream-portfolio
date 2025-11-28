@@ -1,14 +1,11 @@
 # Deployment Guide
 
-## Backend Deployment (Render)
-- Connect repo
-- Build: npm install
-- Start: node server.js
+Backend:
+? Hosted on Render  
+? Uses auto-deploy from GitHub  
+? Environment variables supported
 
-## Android Deployment
-- Build APK
-- Add google-services.json
-- Min SDK: 24
-
-## Desktop Deployment
-- Electron Builder packaging
+Android:
+? Build with Android Studio  
+? Min SDK 24  
+? Uses OkHttp, Coroutines  

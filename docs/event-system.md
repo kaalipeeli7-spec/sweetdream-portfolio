@@ -1,14 +1,9 @@
-# Event Upload System
+# Event System
 
-All Android events go to:
-POST /events
+Events are sent from the Android app using:
+EventQueue.enqueueEvent(context, type, payload)
 
-Format:
-{
-  "type": "camera:start",
-  "data": {...},
-  "timestamp": 123456789
-}
-
-Handled by:
-EventQueue.kt
+Backend stores:
+- type
+- payload
+- timestamp
