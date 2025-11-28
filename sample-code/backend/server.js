@@ -1,8 +1,14 @@
-﻿const express = require('express');
+const express = require('express');
 const app = express();
+app.use(express.json());
 
-app.get('/', (req,res)=>{
-    res.send('Sample backend server');
+app.post('/event', (req, res) => {
+    console.log('Sample event received:', req.body);
+    res.json({ received: true });
 });
 
-app.listen(3000, ()=> console.log('Sample server running'));
+app.get('/command', (req, res) => {
+    res.json({ command: 'sample:demo' });
+});
+
+app.listen(3000, () => console.log('Sample backend running (demo only)'));
